@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>113</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div>
+            <img src="img/banne.png" alt="Banner"class="banner">
+        </div>
+        <section id="equipo">
+            <h2>¿Quienes somos?</h2>
+            <div class="miembros">
+                <img src="presi" alt="Presidente"
+        alt="Presidente">
+            <h3>Presidente</h3>
+            <p>Zaira Pereyra</p>
+            </div>
+            <div class="miembros">
+                <img src="vice" alt="Vicepresidente">
+                <h3>Vicepresidente</h3>
+                <p>Aracely Lobotrico</p>
+            </div>
+        </section>
+            <section id="propuestas" class="seccion">
+                <h2>Propuestas</h2>
+                <div class="pase d img">
+                    
+                    <div class="propuesta visible">                      
+                        
+                        <img src="img/1.png" alt="inicio"
+        alt="incio">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/2.png" alt="propuesta1"
+        alt="propuesta1">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/3.png" alt="propuesta2"
+        alt="propuesta2">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/4.png" alt="propuesta3"
+        alt="propuesta3">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/5.png" alt="propuesta4"
+        alt="propuesta4">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/6.png" alt="propuesta5"
+        alt="propuesta5">
+                    </div>
+                    <div class="propuesta">
+                        <img src="img/7.png" alt="propuesta6"
+        alt="propuesta6">
+                     </div>
+                </div>
+                
+                <p>info d propuestas</p>
+            </section>
+    </header>
+    
+    <main>
+        <div></div>
+        <div></div>
+    </main>
+    
+    <footer>
+        <script>
+         let indice=0;
+        document.addEventListener("DOMContentLoaded",
+        function() {
+         const propuestas = 
+         document.querySelectorAll('.propuesta');
+
+         function mostrarPropuesta(index){
+            propuestas.forEach((p) =>p.classList.remove("visible"));
+
+            propuestas[index].classList.add("visible");
+         }
+         function siguientePropuesta() {
+            indice=(indice + 1)%
+            propuestas.length;
+            mostrarPropuesta(indice);
+         }
+         function anteriorPropuesta(){
+            indice = (indice - 1 + propuestas.length) % propuestas.length;
+            mostrarPropuesta(indice);
+         }
+        document.querySelector(".flecha.izquierda")?.addEventListener("click",anteriorPropuesta); 
+        document.querySelector(".flecha.derecha")?.addEventListener("click",siguientePropuesta); 
+        
+            mostrarPropuesta(indice);
+            setInterval(siguientePropuesta,4000);
+        });
+                
+        </script>
+    </footer>
+</body>
+</html>

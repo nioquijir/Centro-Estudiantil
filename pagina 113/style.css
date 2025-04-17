@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section {
+padding: 40px 20px;
+margin-bottom: 20px;
+border-bottom: 2px solid #ccc;
+
+}
+.banner {
+    background-image: url('img/banne.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    color: white;
+    
+}
+.miembros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.miembro {
+    width: 150px;
+    text-align: center;
+}
+.miembro img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 150px;
+}
+.pase {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2 );
+    height: auto;
+}
+.propuesta{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.propuesta.visible{
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+.propuesta img {
+    width: 100%;
+    display: none;
+    border-bottom: 15px;
+    height: auto;
+    object-fit: cover;
+} 
+.propuesta.visible img{
+    display: block;
+}
+
+
+.flecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 5px 10px;
+    font-size: 24px;
+    cursor: pointer; 
+    z-index: 10;
+}
+.flecha.izquierda {
+    left: 10px;
+}
+.flecha.derecha {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
